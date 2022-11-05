@@ -24,6 +24,8 @@ p {
   --card-color: #f5f4fa;
   --blue-activ-logo: #188ce8;
 
+  --border-card: #EEEEEE;
+
   --container-pading: 94px;
   --header-indents: 50px;
   --indentation: 30px;
@@ -37,11 +39,11 @@ body {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 .link {
@@ -79,17 +81,42 @@ body {
 /* Header  */
 .header {
   background: var(--color-white);
+  border-bottom: 1px solid #ECECEC;
 
-  outline: 1px solid #2196f3;
+  /* outline: 1px solid #2196f3; */
 }
 
-.header .container{
+.header .container {
   padding-top: 24px;
   padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 92px;
 }
 
 .logo-black {
   color: var(--color-black);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-list-item:not(:last-child) {
+  margin-right: var(--header-indents);
 }
 
 .header-list-link {
@@ -121,6 +148,11 @@ body {
   padding: 200px inherit;
 }
 
+/* .hero-blok{
+
+  vertical-align:  bottom;
+} */
+
 .hero-titel {
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -130,6 +162,8 @@ body {
   color: var(--color-white);
   width: 696px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 
@@ -138,13 +172,13 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-white);
   background-color: var(--blue-color-logo);
-
+  padding: 10px 32px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
 }
 
@@ -157,6 +191,14 @@ body {
 .features .container {
   padding-top: var(--container-pading);
   padding-bottom: var(--container-pading);
+}
+
+.feauters-list{
+  display: flex;
+}
+
+.feauters-list-item:not(:last-child){
+margin-right: var(--indentation);
 }
 
 .visually-hidden {
@@ -189,8 +231,13 @@ body {
 }
 
 /* Section activity  */
-.activity .container{
+.activity .container {
   padding-bottom: var(--container-pading);
+}
+
+.activity-list{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Section team */
@@ -198,11 +245,15 @@ body {
   background-color: var(--card-color);
 }
 
-.team .container{
+.team .container {
   padding-top: var(--container-pading);
   padding-bottom: var(--container-pading);
 }
 
+.team-list{
+  display: flex;
+  justify-content: space-between;
+}
 
 .team-list-item {
   background: var(--color-white);
@@ -232,12 +283,12 @@ body {
   background-color: var(--borders-color);
 }
 
-.footer .container{
+.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.footer .logo{
+.footer .logo {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -246,7 +297,7 @@ body {
   color: var(--color-white);
 }
 
-.footer-list-item:not(:last-child){
+.footer-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -269,13 +320,19 @@ body {
 /* portfolio.html
 section Портфоліо */
 
-.portfolio .container{
+.portfolio .container {
   padding-top: var(--container-pading);
   padding-bottom: var(--container-pading);
 }
 
-.portfolio-button-lict{
+.portfolio-button-lict {
   margin-bottom: var(--header-indents);
+  display: flex;
+  justify-content: center;
+}
+
+.portpolio-buttom-item:not(:last-child){
+  margin-right: 8px;
 }
 
 .portfolio-button {
@@ -286,6 +343,8 @@ section Портфоліо */
   text-align: center;
   letter-spacing: 0.03em;
   background-color: var(--card-color);
+  padding: 6px 22px;
+  border:none;
 
   cursor: pointer;
 }
@@ -296,11 +355,27 @@ section Портфоліо */
   color: var(--color-white);
 }
 
+.portfolio-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.portfolio-list-item{
+  margin: 15px;
+}
+
+.t-desc{
+  padding: 20px 24px;
+  border: 1px solid var(--border-card);
+}
+
 .portfolio-list-title {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--primary-color);
+
 }
 
 .portfolio-list-description {
@@ -308,4 +383,5 @@ section Портфоліо */
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--description-text-color);
+
 }
