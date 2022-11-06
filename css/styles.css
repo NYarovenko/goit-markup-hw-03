@@ -24,7 +24,7 @@ p {
   --card-color: #f5f4fa;
   --blue-activ-logo: #188ce8;
 
-  --border-card: #EEEEEE;
+  --border-card: #eeeeee;
 
   --container-pading: 94px;
   --header-indents: 50px;
@@ -40,8 +40,10 @@ body {
 
 .container {
   width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
   /* outline: 1px solid tomato; */
 }
@@ -81,14 +83,12 @@ body {
 /* Header  */
 .header {
   background: var(--color-white);
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 
   /* outline: 1px solid #2196f3; */
 }
 
 .header .container {
-  padding-top: 24px;
-  padding-bottom: 25px;
   display: flex;
   align-items: center;
 }
@@ -125,6 +125,10 @@ nav {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: inherit;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-list-feedback {
@@ -145,7 +149,8 @@ nav {
 }
 
 .hero .container {
-  padding: 200px inherit;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* .hero-blok{
@@ -193,12 +198,12 @@ nav {
   padding-bottom: var(--container-pading);
 }
 
-.feauters-list{
+.feauters-list {
   display: flex;
 }
 
-.feauters-list-item:not(:last-child){
-margin-right: var(--indentation);
+.feauters-list-item:not(:last-child) {
+  margin-right: var(--indentation);
 }
 
 .visually-hidden {
@@ -220,7 +225,7 @@ margin-right: var(--indentation);
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: var(--indentation);
+  margin-bottom: var(--description-indentation);
 }
 
 .features-description {
@@ -235,7 +240,7 @@ margin-right: var(--indentation);
   padding-bottom: var(--container-pading);
 }
 
-.activity-list{
+.activity-list {
   display: flex;
   justify-content: space-between;
 }
@@ -250,13 +255,25 @@ margin-right: var(--indentation);
   padding-bottom: var(--container-pading);
 }
 
-.team-list{
+.team-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+.team-img {
+  display: block;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: var(--indentation);
 }
 
 .team-list-item {
   background: var(--color-white);
+}
+
+.team-performance {
+  padding-top: var(--indentation);
   padding-bottom: var(--indentation);
 }
 
@@ -266,7 +283,6 @@ margin-right: var(--indentation);
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: var(--indentation);
   margin-bottom: var(--description-indentation);
 }
 
@@ -281,15 +297,13 @@ margin-right: var(--indentation);
 /* Footer */
 .footer {
   background-color: var(--borders-color);
-}
-
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer .logo {
   display: inline-block;
+  margin-right: 0;
   margin-bottom: 20px;
 }
 
@@ -320,7 +334,7 @@ margin-right: var(--indentation);
 /* portfolio.html
 section Портфоліо */
 
-.portfolio .container {
+.portfolio {
   padding-top: var(--container-pading);
   padding-bottom: var(--container-pading);
 }
@@ -331,7 +345,7 @@ section Портфоліо */
   justify-content: center;
 }
 
-.portpolio-buttom-item:not(:last-child){
+.portpolio-buttom-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -344,7 +358,7 @@ section Портфоліо */
   letter-spacing: 0.03em;
   background-color: var(--card-color);
   padding: 6px 22px;
-  border:none;
+  border: none;
 
   cursor: pointer;
 }
@@ -355,17 +369,21 @@ section Портфоліо */
   color: var(--color-white);
 }
 
-.portfolio-list{
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
 
-.portfolio-list-item{
+.portfolio-list-item {
   margin: 15px;
 }
 
-.t-desc{
+.portfolio-img {
+  display: block;
+}
+
+.t-desc {
   padding: 20px 24px;
   border: 1px solid var(--border-card);
 }
@@ -375,7 +393,7 @@ section Портфоліо */
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--primary-color);
-
+  margin-bottom: 4px;
 }
 
 .portfolio-list-description {
@@ -383,5 +401,4 @@ section Портфоліо */
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--description-text-color);
-
 }
